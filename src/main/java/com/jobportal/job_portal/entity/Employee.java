@@ -67,4 +67,9 @@ public class Employee {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+    
+    public String toString() {
+        return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", phone="
+                + phone + "]";
+    }
 }
