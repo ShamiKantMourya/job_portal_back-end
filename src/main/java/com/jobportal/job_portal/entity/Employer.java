@@ -19,11 +19,24 @@ public class Employer {
     }
 
     public Employer(String companyName, String email, String password) {
+        super();
         this.companyName = companyName;
         this.email = email;
         this.password = password;
     }
 
-    
+    public Long getId() {
+        return id;
+    }
+    public String getCompanyName() {
+        return companyName;
+    }
+    public String getEmail() {
+        return email;
+    }   
+    public String getPassword() {
+        return password;
+    }
+
 
 }
