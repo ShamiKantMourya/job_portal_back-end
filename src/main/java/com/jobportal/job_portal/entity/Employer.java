@@ -5,16 +5,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 public class Employer {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     public String companyName;
     public String email;
     public String password;
 
-    public Employer(){
+    public Employer() {
 
     }
 
@@ -28,12 +28,15 @@ public class Employer {
     public Long getId() {
         return id;
     }
+
     public String getCompanyName() {
         return companyName;
     }
+
     public String getEmail() {
         return email;
-    }   
+    }
+
     public String getPassword() {
         return password;
     }
@@ -41,15 +44,22 @@ public class Employer {
     public void setId(Long id) {
         this.id = id;
     }
+
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public String toString() {
+        return "Employer [id=" + id + ", companyName=" + companyName + ", email=" + email + ", password=" + password
+                + "]";
+    }
 
 }
