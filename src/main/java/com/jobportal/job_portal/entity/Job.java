@@ -22,7 +22,8 @@ public class Job {
 
     }
 
-    public Job(String jobTitle, String jobDescription, String jobLocation, String jobType, String jobCategory, String jobStatus, String companyImg) {
+    public Job(String jobTitle, String jobDescription, String jobLocation, String jobType, String jobCategory,
+            String jobStatus, String companyImg) {
         super();
         this.jobTitle = jobTitle;
         this.jobDescription = jobDescription;
@@ -33,27 +34,35 @@ public class Job {
         this.companyImg = companyImg;
 
     }
-    public Long getId(){
+
+    public Long getId() {
         return id;
     }
+
     public String getJobTitle() {
         return jobTitle;
     }
+
     public String getJobDescription() {
         return jobDescription;
     }
+
     public String getJobLocation() {
         return jobLocation;
     }
+
     public String getJobType() {
         return jobType;
     }
+
     public String getJobCategory() {
         return jobCategory;
     }
+
     public String getJobStatus() {
         return jobStatus;
     }
+
     public String getCompanyImg() {
         return companyImg;
     }
@@ -61,27 +70,39 @@ public class Job {
     public void setId(Long id) {
         this.id = id;
     }
+
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
     }
+
     public void setJobDescription(String jobDescription) {
         this.jobDescription = jobDescription;
     }
+
     public void setJobLocation(String jobLocation) {
         this.jobLocation = jobLocation;
     }
+
     public void setJobType(String jobType) {
         this.jobType = jobType;
     }
+
     public void setJobCategory(String jobCategory) {
         this.jobCategory = jobCategory;
     }
+
     public void setJobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
     }
+
     public void setCompanyImg(String companyImg) {
         this.companyImg = companyImg;
     }
-    
+
+    public String toString() {
+        return "Job [id=" + id + ", jobTitle=" + jobTitle + ", jobDescription=" + jobDescription + ", jobLocation="
+                + jobLocation + ", jobType=" + jobType + ", jobCategory=" + jobCategory + ", jobStatus=" + jobStatus
+                + ", companyImg=" + companyImg + "]";
+    }
 
 }
