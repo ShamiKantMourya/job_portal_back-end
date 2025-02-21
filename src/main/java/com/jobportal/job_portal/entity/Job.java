@@ -58,4 +58,30 @@ public class Job {
         return companyImg;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+    public void setJobDescription(String jobDescription) {
+        this.jobDescription = jobDescription;
+    }
+    public void setJobLocation(String jobLocation) {
+        this.jobLocation = jobLocation;
+    }
+    public void setJobType(String jobType) {
+        this.jobType = jobType;
+    }
+    public void setJobCategory(String jobCategory) {
+        this.jobCategory = jobCategory;
+    }
+    public void setJobStatus(String jobStatus) {
+        this.jobStatus = jobStatus;
+    }
+    public void setCompanyImg(String companyImg) {
+        this.companyImg = companyImg;
+    }
+    
+
 }
