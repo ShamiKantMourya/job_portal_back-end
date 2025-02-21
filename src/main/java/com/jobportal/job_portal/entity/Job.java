@@ -15,24 +15,47 @@ public class Job {
     public String jobLocation;
     public String jobType;
     public String jobCategory;
-    public String jobQualification;
-    public String jobExperience;
-    public String jobSalary;
+    public String jobStatus;
+    public String companyImg;
 
     public Job() {
 
     }
 
-    public Job(String jobTitle, String jobDescription, String jobLocation, String jobType, String jobCategory,
-            String jobQualification, String jobExperience, String jobSalary) {
+    public Job(String jobTitle, String jobDescription, String jobLocation, String jobType, String jobCategory, String jobStatus, String companyImg) {
         super();
         this.jobTitle = jobTitle;
         this.jobDescription = jobDescription;
         this.jobLocation = jobLocation;
         this.jobType = jobType;
         this.jobCategory = jobCategory;
-        this.jobQualification = jobQualification;
-        this.jobExperience = jobExperience;
-        this.jobSalary = jobSalary;
+        this.jobStatus = jobStatus;
+        this.companyImg = companyImg;
+
     }
+    public Long getId(){
+        return id;
+    }
+    public String getJobTitle() {
+        return jobTitle;
+    }
+    public String getJobDescription() {
+        return jobDescription;
+    }
+    public String getJobLocation() {
+        return jobLocation;
+    }
+    public String getJobType() {
+        return jobType;
+    }
+    public String getJobCategory() {
+        return jobCategory;
+    }
+    public String getJobStatus() {
+        return jobStatus;
+    }
+    public String getCompanyImg() {
+        return companyImg;
+    }
+
 }
