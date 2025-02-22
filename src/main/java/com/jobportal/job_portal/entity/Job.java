@@ -10,7 +10,7 @@ public class Job {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long jobId;
 
     public String jobTitle;
     public String jobDescription;
@@ -38,7 +38,7 @@ public class Job {
     }
 
     public Long getId() {
-        return id;
+        return jobId;
     }
 
     public String getJobTitle() {
@@ -70,7 +70,7 @@ public class Job {
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.jobId = id;
     }
 
     public void setJobTitle(String jobTitle) {
@@ -102,7 +102,7 @@ public class Job {
     }
 
     public String toString() {
-        return "Job [id=" + id + ", jobTitle=" + jobTitle + ", jobDescription=" + jobDescription + ", jobLocation="
+        return "Job [id=" + jobId + ", jobTitle=" + jobTitle + ", jobDescription=" + jobDescription + ", jobLocation="
                 + jobLocation + ", jobType=" + jobType + ", jobCategory=" + jobCategory + ", jobStatus=" + jobStatus
                 + ", companyImg=" + companyImg + "]";
     }

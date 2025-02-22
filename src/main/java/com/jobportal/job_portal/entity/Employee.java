@@ -10,7 +10,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long employeeId;
 
     private String name;
     private String email;
@@ -30,8 +30,8 @@ public class Employee {
         this.phone = phone;
     }
 
-    public Long getId() {
-        return id;
+    public Long getEmployeeId() {
+        return employeeId;
     }
 
     public String getName() {
@@ -50,8 +50,8 @@ public class Employee {
         return phone;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setEmployeeId(Long id) {
+        this.employeeId = id;
     }
 
     public void setName(String name) {
@@ -69,9 +69,10 @@ public class Employee {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    
+
     public String toString() {
-        return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", phone="
+        return "Employee [id=" + employeeId + ", name=" + name + ", email=" + email + ", password=" + password
+                + ", phone="
                 + phone + "]";
     }
 }
