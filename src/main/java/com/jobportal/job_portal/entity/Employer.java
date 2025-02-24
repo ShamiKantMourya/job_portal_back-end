@@ -12,10 +12,10 @@ public class Employer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long employerId;
 
-    public String companyName;
-    public String email;
-    public String password;
-
+    private String companyName;
+    private String email;
+    private String password;
+    
     public Employer() {
 
     }

@@ -23,7 +23,6 @@ public class Employee {
 
     public Employee(String name, String email, String password, String phone) {
         super();
-        // this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;

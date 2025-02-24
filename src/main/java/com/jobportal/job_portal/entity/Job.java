@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Job {
@@ -19,13 +21,18 @@ public class Job {
     public String jobCategory;
     public String jobStatus;
     public String companyImg;
+    private double salary;
+
+    @ManyToOne
+    @JoinColumn(name = "employerId")
+    private Employer employer;
 
     public Job() {
 
     }
 
     public Job(String jobTitle, String jobDescription, String jobLocation, String jobType, String jobCategory,
-            String jobStatus, String companyImg) {
+            String jobStatus, String companyImg, double salary, Employer employer) {
         super();
         this.jobTitle = jobTitle;
         this.jobDescription = jobDescription;
@@ -34,7 +41,8 @@ public class Job {
         this.jobCategory = jobCategory;
         this.jobStatus = jobStatus;
         this.companyImg = companyImg;
-
+        this.salary = salary;
+        this.employer = employer;
     }
 
     public Long getId() {
@@ -69,6 +77,14 @@ public class Job {
         return companyImg;
     }
 
+    public double getSalary() {
+        return salary;
+    }
+
+    public Employer getEmployer() {
+        return employer;
+    }
+
     public void setId(Long id) {
         this.jobId = id;
     }
@@ -101,10 +117,18 @@ public class Job {
         this.companyImg = companyImg;
     }
 
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public void setEmployer(Employer employer) {
+        this.employer = employer;
+    }
+
     public String toString() {
         return "Job [id=" + jobId + ", jobTitle=" + jobTitle + ", jobDescription=" + jobDescription + ", jobLocation="
                 + jobLocation + ", jobType=" + jobType + ", jobCategory=" + jobCategory + ", jobStatus=" + jobStatus
-                + ", companyImg=" + companyImg + "]";
+                + ", companyImg=" + companyImg + " , salary=" + salary + " , employer=" + employer + "]";
     }
 
 }
