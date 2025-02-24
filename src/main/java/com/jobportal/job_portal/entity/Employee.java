@@ -16,17 +16,19 @@ public class Employee {
     private String email;
     private String password;
     private String phone;
+    private String address;
 
     public Employee() {
 
     }
 
-    public Employee(String name, String email, String password, String phone) {
+    public Employee(String name, String email, String password, String phone, String address) {
         super();
         this.name = name;
         this.email = email;
         this.password = password;
         this.phone = phone;
+        this.address = address;
     }
 
     public Long getEmployeeId() {
@@ -49,6 +51,10 @@ public class Employee {
         return phone;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
     public void setEmployeeId(Long id) {
         this.employeeId = id;
     }
@@ -69,9 +75,13 @@ public class Employee {
         this.phone = phone;
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String toString() {
         return "Employee [id=" + employeeId + ", name=" + name + ", email=" + email + ", password=" + password
                 + ", phone="
-                + phone + "]";
+                + phone + " , address=" + address + "]";
     }
 }
