@@ -14,13 +14,13 @@ public class Job {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long jobId;
 
-    public String jobTitle;
-    public String jobDescription;
-    public String jobLocation;
-    public String jobType;
-    public String jobCategory;
-    public String jobStatus;
-    public String companyImg;
+    private String jobTitle;
+    private String jobDescription;
+    private String jobLocation;
+    private String jobType;
+    private String jobCategory;
+    private String jobStatus;
+    private String companyImg;
     private double salary;
 
     @ManyToOne
