@@ -64,4 +64,40 @@ public class JobDTO {
     public double getSalary() {
         return salary;
     }
+
+    public void setJobId(Long jobId) {
+        this.jobId = jobId;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
+    public void setJobDescription(String jobDescription) {
+        this.jobDescription = jobDescription;
+    }
+
+    public void setJobLocation(String jobLocation) {
+        this.jobLocation = jobLocation;
+    }
+
+    public void setJobType(String jobType) {
+        this.jobType = jobType;
+    }
+
+    public void setJobCategory(String jobCategory) {
+        this.jobCategory = jobCategory;
+    }
+
+    public void setJobStatus(String jobStatus) {
+        this.jobStatus = jobStatus;
+    }
+
+    public void setCompanyImg(String companyImg) {
+        this.companyImg = companyImg;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 }
