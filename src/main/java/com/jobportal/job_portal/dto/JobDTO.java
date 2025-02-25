@@ -12,9 +12,11 @@ public class JobDTO {
     private String companyImg;
     private double salary;
 
-    public JobDTO() {}
+    public JobDTO() {
+    }
 
-    public JobDTO(Long jobId, String jobTitle, String jobDescription, String jobLocation, String jobType, String jobCategory,
+    public JobDTO(Long jobId, String jobTitle, String jobDescription, String jobLocation, String jobType,
+            String jobCategory,
             String jobStatus, String companyImg, double salary) {
         this.jobId = jobId;
         this.jobTitle = jobTitle;
@@ -27,5 +29,39 @@ public class JobDTO {
         this.salary = salary;
     }
 
-    
+    public Long getJobId() {
+        return jobId;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public String getJobDescription() {
+        return jobDescription;
+    }
+
+    public String getJobLocation() {
+        return jobLocation;
+    }
+
+    public String getJobType() {
+        return jobType;
+    }
+
+    public String getJobCategory() {
+        return jobCategory;
+    }
+
+    public String getJobStatus() {
+        return jobStatus;
+    }
+
+    public String getCompanyImg() {
+        return companyImg;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
 }
