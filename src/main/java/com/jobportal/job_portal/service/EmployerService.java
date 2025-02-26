@@ -7,11 +7,11 @@ import com.jobportal.job_portal.entity.Employer;
 import com.jobportal.job_portal.repository.EmployerDataRepository;
 
 @Service
-public class EmployerService{
+public class EmployerService {
 
     @Autowired
     private EmployerDataRepository employerDataRepository;
-    
+
     public Employer saveEmployer(Employer employer) {
         return employerDataRepository.save(employer);
     }
@@ -19,5 +19,8 @@ public class EmployerService{
     public void deleteEmployer(Long id) {
         employerDataRepository.deleteById(id);
     }
-    
+
+    public Employer getEmployer(Long id) {
+        return employerDataRepository.findById(id).get();
+    }
 }
