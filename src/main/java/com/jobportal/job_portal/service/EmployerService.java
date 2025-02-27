@@ -14,6 +14,10 @@ public class EmployerService {
     @Autowired
     private EmployerDataRepository employerDataRepository;
 
+    public Iterable<Employer> getAllEmployers() {
+        return employerDataRepository.findAll();
+    }
+
     public Employer saveEmployer(Employer employer) {
         return employerDataRepository.save(employer);
     }
