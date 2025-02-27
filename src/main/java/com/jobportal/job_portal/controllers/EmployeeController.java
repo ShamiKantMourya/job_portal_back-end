@@ -15,7 +15,7 @@ import com.jobportal.job_portal.service.EmployeeService;
 import com.jobportal.job_portal.entity.Employee;
 
 @RestController
-@RequestMapping("/api/v1/employees")
+@RequestMapping("/api/v1/employee")
 public class EmployeeController {
 
     @Autowired
