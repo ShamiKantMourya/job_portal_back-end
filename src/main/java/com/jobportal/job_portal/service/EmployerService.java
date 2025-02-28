@@ -18,7 +18,7 @@ public class EmployerService {
         return employerDataRepository.findAll();
     }
 
-    public Employer saveEmployer(Employer employer) {
+    public Employer createEmployer(Employer employer) {
         return employerDataRepository.save(employer);
     }
 
