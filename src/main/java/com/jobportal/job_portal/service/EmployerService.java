@@ -27,7 +27,12 @@ public class EmployerService {
     }
 
     public Optional<Employer> getEmployerById(Long id) {
-        return employerDataRepository.findById(id);
+        Optional<Employer> employer = employerDataRepository.findById(id);
+        if (employer.isEmpty()) {
+            throw new RuntimeException("Employer not found");
+        } else {
+            return employer;
+        }
     }
 
     public Employer updateEmployer(Employer employer) {
