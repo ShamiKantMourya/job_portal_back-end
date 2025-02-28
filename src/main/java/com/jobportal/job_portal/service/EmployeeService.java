@@ -20,7 +20,12 @@ public class EmployeeService {
     }
 
     public Optional<Employee> getEmployeeById(Long id) {
-        return employeeDataRepository.findById(id);
+        Optional<Employee> employee = employeeDataRepository.findById(id);
+        if (employee.isEmpty()) {
+            throw new RuntimeException("Employee not found");
+        } else {
+            return employee;
+        }
     }
 
     public Employee creatEmployee(Employee employee) {
