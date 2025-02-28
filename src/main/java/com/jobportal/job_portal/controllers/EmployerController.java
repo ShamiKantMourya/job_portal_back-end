@@ -1,10 +1,11 @@
 package com.jobportal.job_portal.controllers;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 import com.jobportal.job_portal.service.EmployerService;
 import com.jobportal.job_portal.entity.Employer;
@@ -12,7 +13,7 @@ import com.jobportal.job_portal.entity.Employer;
 @RestController
 @RequestMapping("/api/employer")
 public class EmployerController {
-    
+
     @Autowired
     private EmployerService employerService;
 
@@ -20,4 +21,10 @@ public class EmployerController {
     public Iterable<Employer> getAllEmployers() {
         return employerService.getAllEmployers();
     }
+
+    @GetMapping("/{id}")
+    public Optional<Employer> getEmployerById(Long id) {
+        return employerService.getEmployerById(id);
+    }
+
 }
