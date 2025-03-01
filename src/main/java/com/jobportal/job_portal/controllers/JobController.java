@@ -1,6 +1,7 @@
 package com.jobportal.job_portal.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,5 +34,9 @@ public class JobController {
     public Job updateJob(Job job) {
         return jobService.updateJob(job);
     }
-    
+
+    @DeleteMapping("/deleteJob")
+    public void deleteJob(Long id) {
+        jobService.deleteJob(id);
+    }
 }
