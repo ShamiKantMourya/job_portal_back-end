@@ -29,4 +29,9 @@ public class JobController {
     public Job createJob(Job job) {
         return jobService.createJob(job);
     }
+    @PostMapping("/updateJob")
+    public Job updateJob(Job job) {
+        return jobService.updateJob(job);
+    }
+    
 }
