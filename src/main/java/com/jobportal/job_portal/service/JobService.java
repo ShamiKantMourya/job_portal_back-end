@@ -27,4 +27,8 @@ public class JobService {
     public void deleteJob(Long id){
         jobDataRepository.deleteById(id);
     }
+
+    public Iterable<Job> getAllJobs(){
+        return jobDataRepository.findAll();
+    }
 }
