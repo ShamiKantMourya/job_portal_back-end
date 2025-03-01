@@ -13,7 +13,7 @@ import com.jobportal.job_portal.service.JobService;
 @RestController
 @RequestMapping("/api/jobs")
 public class JobController {
-    
+
     @Autowired
     private JobService jobService;
 
@@ -21,15 +21,17 @@ public class JobController {
     public Iterable<Job> getAllJobs() {
         return jobService.getAllJobs();
     }
+
     @GetMapping("/job")
     public Job getJobById(Long id) {
         return jobService.getJobById(id);
     }
-  
+
     @PostMapping("/createJob")
     public Job createJob(Job job) {
         return jobService.createJob(job);
     }
+
     @PostMapping("/updateJob")
     public Job updateJob(Job job) {
         return jobService.updateJob(job);
