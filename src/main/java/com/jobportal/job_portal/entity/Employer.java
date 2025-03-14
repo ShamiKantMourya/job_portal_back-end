@@ -15,7 +15,7 @@ public class Employer {
     private String companyName;
     private String email;
     private String password;
-    
+
     public Employer() {
 
     }
