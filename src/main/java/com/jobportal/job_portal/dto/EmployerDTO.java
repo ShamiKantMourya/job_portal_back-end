@@ -6,7 +6,8 @@ public class EmployerDTO {
     private String email;
     private String phone;
 
-    public EmployerDTO() {}
+    public EmployerDTO() {
+    }
 
     public EmployerDTO(Long employerId, String companyName, String email, String phone) {
         this.employerId = employerId;
@@ -17,10 +18,6 @@ public class EmployerDTO {
 
     public Long getEmployerId() {
         return employerId;
-    }
-
-    public void setEmployerId(Long employerId) {
-        this.employerId = employerId;
     }
 
     public String getCompanyName() {
@@ -35,12 +32,16 @@ public class EmployerDTO {
         return email;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
+    public void setEmployerId(Long employerId) {
+        this.employerId = employerId;
     }
 
     public void setPhone(String phone) {
