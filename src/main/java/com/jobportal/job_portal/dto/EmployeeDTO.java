@@ -38,10 +38,6 @@ public class EmployeeDTO {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -49,7 +45,11 @@ public class EmployeeDTO {
     public String getAddress() {
         return address;
     }
-    
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }
