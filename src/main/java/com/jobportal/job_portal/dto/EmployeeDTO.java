@@ -22,9 +22,6 @@ public class EmployeeDTO {
         return employeeId;
     }
 
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
-    }
 
     public String getName() {
         return name;
@@ -42,10 +39,14 @@ public class EmployeeDTO {
         return address;
     }
 
+    public void setEmployeeId(Long employeeId) {
+        this.employeeId = employeeId;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public void setEmail(String email) {
         this.email = email;
     }
