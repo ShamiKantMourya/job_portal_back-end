@@ -24,10 +24,6 @@ public class EmployerDTO {
         return companyName;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -46,5 +42,9 @@ public class EmployerDTO {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+        public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 }
