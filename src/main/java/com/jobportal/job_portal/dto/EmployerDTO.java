@@ -44,7 +44,7 @@ public class EmployerDTO {
         this.phone = phone;
     }
 
-        public void setCompanyName(String companyName) {
+    public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
 }
